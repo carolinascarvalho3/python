@@ -7,6 +7,8 @@ class Exercicios2:
         self.num1 = num1
         self.num2 = num2
 
+    ####### Primeira Lista #######
+
     def imprimirNumeros(self):
         msg = ""
         for i in range(1,11,1):
@@ -15,10 +17,12 @@ class Exercicios2:
 
     def pares(self):
         par = ""
+        impar = ""
         for i in range(1,21):
-            if i % 2 == 0:
+            if i % 2 != 0:
              par += f'\n{i}'
-        return par
+             if i % 2 != 0:
+                 impar += f'\n{i}'
 
     def soma100(self):
         cem = 50 * 101
@@ -31,13 +35,12 @@ class Exercicios2:
         return mul
 
     def parImpar(self, num1):
-        input('Informe um número')
+
         if num1 % 2 == 0:
           return 'Par'
         else:
           return 'Ímpar'
     def positivoNegativo(self, num1):
-        input('Informe um número')
         if num1 <0:
             return 'Negativo'
         else: return 'Positivo'
@@ -50,7 +53,7 @@ class Exercicios2:
 
     def tabuada2(self, num1):
         resultado = ""
-        for i in range(0,num1,1):
+        for i in range(0,11,1):
             resultado+= f'\n{num1} * {i} = {num1 * i}'
         return resultado
     def somar(self, num1):
@@ -60,12 +63,14 @@ class Exercicios2:
             resultado+= f'\n{num1} * {i} = {num1 * i}'
         return resultado
 
-    def primo20(self):
+    def primo20(self, primo):
         primo = '1\n2\n3\n5'
         for i in range(5,21,1):
             if i % 2 != 0 and i % 3 != 0 and i % 5 != 0:
                 primo+=f'\n{i}'
         return primo
+
+    ####### Segunda Lista #######
 
     def valores(self, num1, num2):
         num1 = 10
@@ -73,7 +78,10 @@ class Exercicios2:
 
         num1, num2 = num2, num1
 
-    def antecessor(self):
+        return num1, num2
+
+
+    def antecessor(self, num1, num2):
         num1 = int(input('Digite um número: '))
 
         num2 = num1 - 1
@@ -86,7 +94,8 @@ class Exercicios2:
 
         area = base * altura * altura
         return area
-    def calculoIdade(self, idade, meses, anos, dias, nasc):
+
+    def calculoIdade(self, idade, meses, anos, dias, nasc, diasTot, idadeDias):
         diasTot = (anos * 365) + (meses * 30) + dias
 
         idade = ""
@@ -94,7 +103,7 @@ class Exercicios2:
         anos = ""
         dias = ""
 
-        idade_em_dias = (anos, meses, dias)
+        idadeDias = (anos, meses, dias)
         return diasTot
     def eleitores(self, brancos, nulos, validos, pBrancos, pNulos, pValidos, eleitores):
 
@@ -228,40 +237,6 @@ class Exercicios2:
         if valor < 0:
                 neg =+ 1
 
-    def somar40(self):
-
-        soma = 0
-        numero = 0
-        for i in range(1,11):
-          numero = float(input('Digite um número: '))
-        if soma < 40 :
-          soma += numero
-
-    def mediaAritmetica(self):
-
-        mediaAri =  0
-        quantidade = 0
-
-        for i in range(15, 100):
-            mediaAri += i
-            quantidade += 1
-            media = mediaAri / quantidade
-
-    def quantidade(self):
-        quantidade = int(input('Digite a quantidade de números: '))
-
-        numeros = {}
-        soma = 0
-
-        for i in range(quantidade):
-            numero = int(input('Digite um números: '))
-
-            numeros[numero] = soma
-            soma += numero
-
-            media = soma / quantidade
-
-            maiorNumero = max(numeros)
 
 
 

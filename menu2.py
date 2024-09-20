@@ -30,15 +30,14 @@ class Menu:
                   '\n16. Salário Mensal'            +
                   '\n17. Custo de um Carro'         +
                   '\n18. Três Notas'                +
-                  '\n19. Maças Compradas'           +
+                  '\n19. Maçãs Compradas'           +
                   '\n20. Ler Valores'               +
                   '\n21. Salário Vendedor'          +
                   '\n22. Extrato de Banco'          +
                   '\n23. Tabuada Usuário'           +
                   '\n24. Imprimir Valores'          +
-                  '\n25. Ler 10'                    +
-                  '\n26. Somar abaixo de 40'        +
-                  '\n27. Media Aritmética'          )
+                  '\n25. Ler 10'                    )
+
     def coletar(self):
             self.num1 = int(input('Informe o primeiro número:  '))
             self.num2 = int(input('Informe o segundo número:  '))
@@ -107,12 +106,6 @@ class Menu:
                 print(f'{self.exer.imprimirValores}')
             elif self.opcao == 25:
                 print(f'{self.exer.ler10}')
-            elif self.opcao == 26:
-                print(f'{self.exer.somar40}')
-            elif self.opcao == 27:
-                print(f'A média aritmética é dos números inteiros é: {self.exer.mediaAritmetica}')
-
-
 
 
 
